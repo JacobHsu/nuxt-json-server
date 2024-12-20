@@ -15,9 +15,9 @@ export interface CategoryDetails {
 }
 
 export const getCategoriesUrl = () => (
-  'http://localhost:3001/categories'
+  'https://json-server-vercel-chi.vercel.app/categories'
 )
 
 export const getCategoryDetailsUrl = (categorySlug: string) => (
-  `http://localhost:3001/categories/${categorySlug}?_embed=posts`
+  `https://json-server-vercel-chi.vercel.app/categories/${categorySlug}?_embed=posts`
 )

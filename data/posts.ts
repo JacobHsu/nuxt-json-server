@@ -17,11 +17,11 @@ export interface PostDetails {
 }
 
 export const getPostsUrl = () => (
-  'http://localhost:3001/posts'
+  'https://json-server-vercel-chi.vercel.app/posts'
 )
 
 export const getPostDetailsUrl = (postSlug: string) => (
-  `http://localhost:3001/post-details/${postSlug}?_expand=category`
+  `https://json-server-vercel-chi.vercel.app/post-details/${postSlug}?_expand=category`
 )
 
 export const getPosts = async (): Promise<Post[]> => {
