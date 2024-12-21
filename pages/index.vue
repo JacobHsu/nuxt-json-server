@@ -9,19 +9,11 @@ const { data: posts } = await useFetch<Post[]>(getPostsUrl())
   <main>
     <h1>Nuxt.js Examples</h1>
     <div>
-      <div
+      <PostCard
         v-for="post in posts"
         :key="post.id"
-        class="card"
-      >
-        <h2 class="title">
-          {{ post.title }}
-        </h2>
-        <div class="category">
-          <a href="#">Category: {{ post.category.name }}</a>
-        </div>
-        <RenderMarkdown :source="post.intro" />
-      </div>
+        :post="post"
+      />
     </div>
   </main>
 </template>
